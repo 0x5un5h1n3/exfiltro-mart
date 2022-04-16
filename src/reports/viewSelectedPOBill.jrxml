@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d06bb748-d855-4994-967a-056ea9412d9e">
+	<property name="ireport.zoom" value="1.6528925619834907"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="po_id" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="po_total" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+     purchase_order.`itm_name` AS purchase_order_itm_name,
+     purchase_order.`itm_code` AS purchase_order_itm_code,
+     purchase_order.`po_item_quantity` AS purchase_order_po_item_quantity,
+     purchase_order.`po_item_price` AS purchase_order_po_item_price,
+     purchase_order.`sup_username` AS purchase_order_sup_username,
+     purchase_order.`po_total` AS purchase_order_po_total,
+     purchase_order.`po_lead_time` AS purchase_order_po_lead_time,
+     purchase_order.`po_id` AS purchase_order_po_id
+FROM
+     `purchase_order` purchase_order
+
+WHERE
+     po_id = $P{po_id}]]>
+	</queryString>
+	<field name="purchase_order_itm_name" class="java.lang.String"/>
+	<field name="purchase_order_itm_code" class="java.lang.String"/>
+	<field name="purchase_order_po_item_quantity" class="java.lang.Integer"/>
+	<field name="purchase_order_po_item_price" class="java.lang.Integer"/>
+	<field name="purchase_order_sup_username" class="java.lang.String"/>
+	<field name="purchase_order_po_total" class="java.lang.Integer"/>
+	<field name="purchase_order_po_lead_time" class="java.sql.Date"/>
+	<field name="purchase_order_po_id" class="java.lang.Integer"/>
+	<variable name="po_total" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="75" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="75" forecolor="#FFFFFF" backcolor="#000000" uuid="5d5fc1b7-d6c5-418f-be87-80d4fdc2ec20"/>
+			</rectangle>
+			<elementGroup>
+				<staticText>
+					<reportElement mode="Transparent" x="85" y="41" width="164" height="34" forecolor="#FFFFFF" backcolor="#000000" uuid="82e5fb28-c573-475b-992d-0bf0d09520fa"/>
+					<textElement textAlignment="Left" verticalAlignment="Top">
+						<font fontName="Segoe UI" size="8"/>
+					</textElement>
+					<text><![CDATA[Go beyond expectations]]></text>
+				</staticText>
+				<staticText>
+					<reportElement mode="Transparent" x="85" y="20" width="164" height="21" forecolor="#FFFFFF" backcolor="#000000" uuid="7e32dd29-acc9-41da-8316-90c53f9d3c31"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Segoe UI" size="13"/>
+					</textElement>
+					<text><![CDATA[Exfiltro Mart]]></text>
+				</staticText>
+				<image hAlign="Center" vAlign="Middle">
+					<reportElement x="26" y="17" width="59" height="48" uuid="7c328da1-c983-4dc3-b909-199a0c8acf6d"/>
+					<imageExpression><![CDATA["C:\\Users\\0x5un5h1n3\\Documents\\NetBeansProjects\\Exfiltro_Mart\\src\\reports\\img\\exfiltro.jpg"]]></imageExpression>
+				</image>
+			</elementGroup>
+			<staticText>
+				<reportElement x="406" y="21" width="32" height="11" forecolor="#FFFFFF" uuid="c566c23b-847a-49cf-a110-d23a9257fc32"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Web]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="33" width="32" height="11" forecolor="#FFFFFF" uuid="83610750-e672-46e7-b5dd-6173ea605400"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Hotline]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="406" y="45" width="32" height="12" forecolor="#FFFFFF" uuid="29346c2c-ba1e-460e-8f2a-b7f5ac5832c4"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="21" width="78" height="11" forecolor="#FFFFFF" uuid="4c6b3a09-f797-4974-bf7e-4869c86c52a1"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[|   www.exfiltro.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="33" width="78" height="11" forecolor="#FFFFFF" uuid="b2dd5050-867c-4ad4-895a-76afab1f0b5f"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[|   012345678789]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="438" y="45" width="88" height="12" forecolor="#FFFFFF" uuid="1470e932-3044-4b6a-a8a0-a4bc35553d84"/>
+				<textElement>
+					<font fontName="Segoe UI" size="8"/>
+				</textElement>
+				<text><![CDATA[|   contact@exfiltro.com]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="0" width="553" height="35" backcolor="#464646" uuid="65259c90-5ac8-47d4-9718-9e81ad6b550d"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Transparent" x="15" y="0" width="129" height="35" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="2dca4deb-77f1-4ce8-8b21-bb24d2830fef"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Purchase Order Bill No : ]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="325" y="0" width="216" height="35" forecolor="#FFFFFF" uuid="25cf417e-0f95-44a2-838c-2a51743e25e3"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="144" y="0" width="106" height="35" forecolor="#FFFFFF" uuid="a36ec5a0-4eb7-4fee-8317-6e7cda8dfa38"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{po_id}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="460" y="0" width="94" height="20" backcolor="#969696" uuid="125102e1-0b18-46d6-be09-8fe174d6778d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="299" y="0" width="91" height="20" backcolor="#969696" uuid="56832179-e475-4467-9c22-fd8bcad7a3e8"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="228" y="0" width="71" height="20" backcolor="#969696" uuid="8c475198-1bcd-4dca-865f-e7359f6dbd79"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="168" y="0" width="60" height="20" backcolor="#969696" uuid="ff48de50-d88d-48ea-884d-d3f21e4de94d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="71" y="0" width="97" height="20" backcolor="#969696" uuid="b24fec29-eb96-4681-befc-2c8742f4859a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="1" y="0" width="70" height="20" backcolor="#969696" uuid="b6df4d58-2ef9-41d3-9b06-0cc1125e0596"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Transparent" x="1" y="0" width="70" height="20" backcolor="#B4B4B4" uuid="2ea7f87d-fd5b-470c-a8b4-5a3c35d304f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Item Code]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="71" y="0" width="97" height="20" backcolor="#B4B4B4" uuid="97998778-c22e-4b50-b00c-3d16600406dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Item Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="168" y="0" width="60" height="20" backcolor="#B4B4B4" uuid="682dd34f-0797-4792-9398-f05ba57f2f1e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Quantity]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="228" y="0" width="71" height="20" backcolor="#B4B4B4" uuid="1d482ed1-a155-48c6-accd-375dd687b59e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Item Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="299" y="0" width="91" height="20" backcolor="#B4B4B4" uuid="aa35d79e-45a7-41f5-87ab-aa5eb3c2a9be"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Supplier]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Transparent" x="460" y="0" width="94" height="20" backcolor="#B4B4B4" uuid="22942b5d-f3e7-416a-877e-e550475de236"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="390" y="0" width="70" height="20" backcolor="#969696" uuid="b82eff19-c52c-4acd-b2e6-66d1e99bfbc2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="390" y="0" width="70" height="20" uuid="1df96454-0c7f-41d1-81e5-4ff3d2715b64"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Lead Time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="460" y="0" width="94" height="20" backcolor="#DCDCDC" uuid="6669a5d1-2f55-4ef6-b690-d092a0ab067a"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="299" y="0" width="91" height="20" backcolor="#DCDCDC" uuid="f80cb425-6ed8-4969-8333-9692fa90a16d"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="228" y="0" width="71" height="20" backcolor="#DCDCDC" uuid="57ce5653-fbec-4c7a-a68b-d21b12e4a834"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="168" y="0" width="60" height="20" backcolor="#DCDCDC" uuid="0025315b-0494-4a8a-aab6-3b4688664391"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="71" y="0" width="97" height="20" backcolor="#DCDCDC" uuid="74bcd999-84e0-423a-a3a2-e930233f87c3"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="1" y="0" width="70" height="20" backcolor="#DCDCDC" uuid="95e144d6-01b8-440d-a191-8ae84aef49c7"/>
+			</rectangle>
+			<textField>
+				<reportElement x="71" y="0" width="97" height="20" uuid="fd8dc0cd-bd7f-4479-87ba-1fa890643c56"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purchase_order_itm_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="0" width="60" height="20" uuid="f3445e6c-d52f-4a08-9b57-ca63bee4f806"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purchase_order_po_item_quantity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="228" y="0" width="61" height="20" uuid="2df40b62-cc61-4bdc-a6f9-76fe3e53c661"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purchase_order_po_item_price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="299" y="0" width="91" height="20" uuid="b7d023b0-1b39-44e8-93b9-382a7623d148"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purchase_order_sup_username}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="460" y="0" width="81" height="20" uuid="c7b626e9-1400-4f98-bada-c2b0e6a69587"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purchase_order_po_total}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="390" y="0" width="70" height="20" backcolor="#DCDCDC" uuid="1d2fb47e-e18c-4459-9825-216d63ef41c7"/>
+			</rectangle>
+			<textField>
+				<reportElement x="400" y="0" width="54" height="20" uuid="0c17b59c-5f7c-42d1-943c-43132c297cd7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purchase_order_po_lead_time}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1" y="0" width="70" height="20" uuid="25bc15b3-330b-4e22-9232-f475704981e9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{purchase_order_itm_code}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="487" y="0" width="54" height="35" uuid="cac6ca7c-97d1-4306-9df4-92abdd27ef6b"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="541" y="0" width="11" height="35" uuid="afcdc11b-0615-4f9d-8ed5-a2b881602db4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="117" y="0" width="1" height="35" uuid="4e18939b-4846-4ac5-97c1-0ca21739f8cf"/>
+			</line>
+			<staticText>
+				<reportElement x="128" y="0" width="100" height="18" uuid="35fd167c-54cb-48de-a581-bd34f6853183"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[www.exfiltro.com]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="18" width="121" height="12" uuid="e8e52571-6a8c-4198-ac9c-d6a1d71e5d40"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Segoe UI" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[@exfiltro | Find us on Social Profiles]]></text>
+			</staticText>
+			<line>
+				<reportElement x="249" y="0" width="1" height="35" uuid="ada97393-c854-4df7-80eb-3153d66c0f89"/>
+			</line>
+			<staticText>
+				<reportElement x="260" y="18" width="76" height="12" uuid="5f6ea322-83ef-4bb4-8118-956fa3e14b2c"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Segoe UI" size="6" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Go beyond expectations]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="0" width="76" height="18" uuid="06805925-d948-462c-8a82-29657d2ddc37"/>
+				<textElement verticalAlignment="Bottom">
+					<font fontName="Segoe UI" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[www.exfiltro.com]]></text>
+			</staticText>
+			<image>
+				<reportElement x="1" y="0" width="117" height="35" uuid="7fe40455-3987-4704-adb3-66b101de2275"/>
+				<imageExpression><![CDATA["C:\\Users\\0x5un5h1n3\\Documents\\NetBeansProjects\\Exfiltro_Mart\\src\\reports\\img\\developer.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<rectangle>
+				<reportElement x="1" y="0" width="459" height="20" backcolor="#DCDCDC" uuid="287f8034-5815-4bed-80c8-8b457f1af80b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="460" y="0" width="94" height="20" backcolor="#DCDCDC" uuid="4b47d152-a587-4b86-a475-74510149a7ae"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Transparent" x="15" y="0" width="295" height="20" backcolor="#B4B4B4" uuid="b6bb13e6-0964-4349-85e4-46654239c379"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<text><![CDATA[Purchase Order Bill Total (Rs.)]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="460" y="0" width="81" height="20" uuid="8b32fc5f-927b-47c6-9134-95a72ddaf055"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Segoe UI" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{po_total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
