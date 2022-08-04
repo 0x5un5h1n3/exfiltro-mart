@@ -37,8 +37,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#benefits">Benefits</a></li>
-        </ul>
+      </ul>
     </li>
   </Ul>
 </details>
